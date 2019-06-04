@@ -1,0 +1,41 @@
+footer{
+    width:100%;
+    position: fixed;
+    bottom: 0px;
+    height: 5.3rem;
+    z-index: 1000;
+}
+.foot{
+    float: left;
+    padding:0.4em 0em;
+    width:25%;
+    height: 5.3rem;
+    background: rgb(247, 247, 247);
+    /* left:50%;
+    transform: translateX(-50%) */
+}
+.img{
+   width:2.8rem;
+   height:2.8rem;
+   /* background: red; */
+   margin: auto
+}
+.img img
+{
+    width:100%;
+}
+.text{
+    text-align: center;
+    font-size: 1.1rem 
+}
+/*返回*/
+.back{
+    position: absolute;
+    width:1.5rem;
+    height: 1.5rem;
+    
+    left:0.4rem
+  }
+  .back img{
+      width: 100%
+  }

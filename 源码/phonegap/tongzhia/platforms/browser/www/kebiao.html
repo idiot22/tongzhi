@@ -1,0 +1,607 @@
+<!--
+    遇到的问题：
+    1.修改行，表格排版
+    修改行和表格头需要fixed，但不在同一层，修改行伸缩表格不能自动向上
+    2.td中的div不能以td为参照点
+    3.animated怎么让动画在一定范围内显示
+    4.remove元素加animated没效果
+    5.给一个元素添加不同事件，自动判断事件然后执行不同代码
+    6.on.addeventlisten添加多个事件
+    7.正则表达式截图有多个值
+    8.判断是否为数值isNaN不能现、先转为int，int会把字符也转成数字
+    9.不同页面传输数据，异步，服务器
+    收获：
+    1.使用js实现长按事件
+    2.处理url
+    3.传输数据
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <title>课表</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link type="text/css" href="lib/Animate/animate.min.css" rel="stylesheet">
+    <link type="text/css" href="css/inform.css" rel="stylesheet">
+    <link type="text/css" href="css/kebiao.css" rel="stylesheet">
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="js/kechen.js"></script>
+</head>
+
+<body>
+    <!--页头-->
+    <header id="kebiao-head">
+        <a href="day.html">
+            <div class="back">
+                <img src="img/fan.png" alt="">
+            </div>
+        </a>
+        <div id="head-mid">
+            <div>第18周
+                <img src="img/xia.png">
+            </div>
+            <div>大三 第1学期</div>
+        </div>
+    </header>
+    <!--/页头-->
+    <!--修改-->
+    <div id="xiugai">
+        <div id="gai-week">
+            <img src="img/gai.png">
+            <div>修改</div>
+            <div>当前周</div>
+        </div>
+        <div id="week-list">
+            <li>
+                <span>第</span>
+                <span class="shu">1</span>
+                <span>周</span>
+            </li>
+            <li>
+                <span>第</span>
+                <span class="shu">2</span>
+                <span>周</span>
+            </li>
+            <li>
+                <span>第</span>
+                <span class="shu">3</span>
+                <span>周</span>
+            </li>
+            <li>
+                <span>第</span>
+                <span class="shu">4</span>
+                <span>周</span>
+            </li>
+            <li>
+                <span>第</span>
+                <span class="shu">5</span>
+                <span>周</span>
+            </li>
+            <li>
+                <span>第</span>
+                <span class="shu">6</span>
+                <span>周</span>
+            </li>
+            <li>
+                <span>第</span>
+                <span class="shu">7</span>
+                <span>周</span>
+            </li>
+            <li>
+                <span>第</span>
+                <span class="shu">8</span>
+                <span>周</span>
+            </li>
+            <li>
+                <span>第</span>
+                <span class="shu">9</span>
+                <span>周</span>
+            </li>
+            <li>
+                <span>第</span>
+                <span class="shu">10</span>
+                <span>周</span>
+            </li>
+            <li>
+                <span>第</span>
+                <span class="shu">11</span>
+                <span>周</span>
+            </li>
+            <li>
+                <span>第</span>
+                <span class="shu">12</span>
+                <span>周</span>
+            </li>
+            <li>
+                <span>第</span>
+                <span class="shu">13</span>
+                <span>周</span>
+            </li>
+            <li>
+                <span>第</span>
+                <span class="shu">14</span>
+                <span>周</span>
+            </li>
+            <li>
+                <span>第</span>
+                <span class="shu">15</span>
+                <span>周</span>
+            </li>
+            <li>
+                <span>第</span>
+                <span class="shu">16</span>
+                <span>周</span>
+            </li>
+            <li>
+                <span>第</span>
+                <span class="shu">17</span>
+                <span>周</span>
+            </li>
+            <li>
+                <span>第</span>
+                <span class="shu">18</span>
+                <span>周</span>
+            </li>
+        </div>
+    </div>
+    <!--/修改-->
+    <!--课程表-->
+    <section id="kechen-body">
+        <!--课程头部-->
+        <table class="kebiao-table" style="position: fixed;z-index: 1000;">
+            <thead>
+                <tr>
+                    <th width="30">12月</th>
+                    <th>
+                        <p>周一
+                            <br>
+                            <span>1日</span>
+                        </p>
+                    </th>
+                    <th>
+                        <p>周二
+                            <br>
+                            <span>2日</span>
+                        </p>
+                    </th>
+                    <th>
+                        <p>周三
+                            <br>
+                            <span>3日</span>
+                        </p>
+                    </th>
+                    <th>
+                        <p>周四
+                            <br>
+                            <span>4日</span>
+                        </p>
+                    </th>
+                    <th>
+                        <p>周五
+                            <br>
+                            <span>5日</span>
+                        </p>
+                    </th>
+                    <th>
+                        <p>周六
+                            <br>
+                            <span>6日</span>
+                        </p>
+                    </th>
+                    <th>
+                        <p>周日
+                            <br>
+                            <span>7日</span>
+                        </p>
+                    </th>
+                </tr>
+            </thead>
+        </table>
+        <table class="kebiao-table">
+            <thead>
+                <tr>
+                    <th width="30">12月</th>
+                    <th>
+                        <p>周一
+                            <br>
+                            <span>1日</span>
+                        </p>
+                    </th>
+                    <th>
+                        <p>周二
+                            <br>
+                            <span>2日</span>
+                        </p>
+                    </th>
+                    <th>
+                        <p>周三
+                            <br>
+                            <span>3日</span>
+                        </p>
+                    </th>
+                    <th>
+                        <p>周四
+                            <br>
+                            <span>4日</span>
+                        </p>
+                    </th>
+                    <th>
+                        <p>周五
+                            <br>
+                            <span>5日</span>
+                        </p>
+                    </th>
+                    <th>
+                        <p>周六
+                            <br>
+                            <span>6日</span>
+                        </p>
+                    </th>
+                    <th>
+                        <p>周日
+                            <br>
+                            <span>7日</span>
+                        </p>
+                    </th>
+                </tr>
+            </thead>
+            <!--tbody-->
+            <tbody>
+
+                <tr>
+                    <td>1</td>
+                    <td id="1/1">
+                    </td>
+                    <td id="2/1">
+                    </td>
+                    <td id="3/1">
+
+                    </td>
+                    <td id="4/1">
+
+                    </td>
+                    <td id="5/1">
+
+                    </td>
+                    <td id="6/1">
+
+                    </td>
+                    <td id="7/1">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td id="1/2">
+
+                    </td>
+                    <td id="2/2">
+
+                    </td>
+                    <td id="3/2">
+
+                    </td>
+                    <td id="4/2">
+
+                    </td>
+                    <td id="5/2">
+
+                    </td>
+                    <td id="6/2">
+
+                    </td>
+                    <td id="7/2">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td id="1/3">
+
+                    </td>
+                    <td id="2/3">
+
+                    </td>
+                    <td id="3/3">
+
+                    </td>
+                    <td id="4/3">
+
+                    </td>
+                    <td id="5/3">
+
+                    </td>
+                    <td id="6/3">
+
+                    </td>
+                    <td id="7/3">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td id="1/4">
+
+                    </td>
+                    <td id="2/4">
+
+                    </td>
+                    <td id="3/4">
+
+                    </td>
+                    <td id="4/4">
+
+                    </td>
+                    <td id="5/4">
+
+                    </td>
+                    <td id="6/4">
+
+                    </td>
+                    <td id="7/4">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td id="1/5">
+
+                    </td>
+                    <td id="2/5">
+
+                    </td>
+                    <td id="3/5">
+
+                    </td>
+                    <td id="4/5">
+
+                    </td>
+                    <td id="5/5">
+
+                    </td>
+                    <td id="6/5">
+
+                    </td>
+                    <td id="7/5">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td id="1/6">
+
+                    </td>
+                    <td id="2/6">
+
+                    </td>
+                    <td id="3/6">
+
+                    </td>
+                    <td id="4/6">
+
+                    </td>
+                    <td id="5/6">
+
+                    </td>
+                    <td id="6/6">
+
+                    </td>
+                    <td id="7/6">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td id="1/7">
+
+                    </td>
+                    <td id="2/7">
+
+                    </td>
+                    <td id="3/7">
+
+                    </td>
+                    <td id="4/7">
+
+                    </td>
+                    <td id="5/7">
+
+                    </td>
+                    <td id="6/7">
+
+                    </td>
+                    <td id="7/7">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td id="1/8">
+
+                    </td>
+                    <td id="2/8">
+
+                    </td>
+                    <td id="3/8">
+
+                    </td>
+                    <td id="4/8">
+
+                    </td>
+                    <td id="5/8">
+
+                    </td>
+                    <td id="6/8">
+
+                    </td>
+                    <td id="7/8">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td id="1/9">
+
+                    </td>
+                    <td id="2/9">
+
+                    </td>
+                    <td id="3/9">
+
+                    </td>
+                    <td id="4/9">
+
+                    </td>
+                    <td id="5/9">
+
+                    </td>
+                    <td id="6/9">
+
+                    </td>
+                    <td id="7/9">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td id="1/10">
+
+                    </td>
+                    <td id="2/10">
+
+                    </td>
+                    <td id="3/10">
+
+                    </td>
+                    <td id="4/10">
+
+                    </td>
+                    <td id="5/10">
+
+                    </td>
+                    <td id="6/10">
+
+                    </td>
+                    <td id="7/10">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td id="1/11">
+
+                    </td>
+                    <td id="2/11">
+
+                    </td>
+                    <td id="3/11">
+
+                    </td>
+                    <td id="4/11">
+
+                    </td>
+                    <td id="5/11">
+
+                    </td>
+                    <td id="6/11">
+
+                    </td>
+                    <td id="7/11">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td id="1/12">
+
+                    </td>
+                    <td id="2/12">
+
+                    </td>
+                    <td id="3/12">
+
+                    </td>
+                    <td id="4/12">
+
+                    </td>
+                    <td id="5/12">
+
+                    </td>
+                    <td id="6/12">
+
+                    </td>
+                    <td id="7/12">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td id="1/13">
+
+                    </td>
+                    <td id="2/13">
+
+                    </td>
+                    <td id="3/13">
+
+                    </td>
+                    <td id="4/13">
+
+                    </td>
+                    <td id="5/13">
+
+                    </td>
+                    <td id="6/13">
+
+                    </td>
+                    <td id="7/13">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td id="1/14">
+
+                    </td>
+                    <td id="2/14">
+
+                    </td>
+                    <td id="3/14">
+
+                    </td>
+                    <td id="4/14">
+
+                    </td>
+                    <td id="5/14">
+
+                    </td>
+                    <td id="6/14">
+
+                    </td>
+                    <td id="7/14">
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!--课程块-->
+        <div id="fujia">
+            <div id="KC-sum">
+            </div>
+            <div id="add-sum">
+            </div>
+
+        </div>
+    </section>
+    <!--课程表-->
+    <!-- <script type="text/javascript" src="cordova.js"></script> -->
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+
+</body>
+
+</html>

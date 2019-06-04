@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *"
+    />
+    <link type="text/css" href="css/inform.css" rel="stylesheet">
+    <link type="text/css" href="css/tzxq.css" rel="stylesheet">
+    <title>通知详情</title>
+</head>
+
+<body style="background:white">
+    <!--页头-->
+    <header>
+        <a href="inform.html">
+            <div class="back">
+                <img src="img/fan.png" alt="">
+            </div>
+        </a>
+
+        <div class="share" onClick="toshare()">
+            <img src="img/share 2.png" alt="">
+        </div>
+        通知详情
+    </header>
+    <!--/页头-->
+    <!--图片-->
+    <section id="xq-img">
+    </section>
+    <!--图片-->
+
+    <!--标题-->
+    <section id="xq-title">
+        <div id="title">
+            树莓的学生因为不堪大作业压力而集体上木铎天台
+        </div>
+        <div id="xqicon">
+            <div id="icon-kuai">
+                <div class="touxiang " id="tx"></div>
+                <span>信院团委</span>
+            </div>
+            <div id="icon-kuai">
+                <div class="touxiang" id="time"></div>
+                <span>2018-12-20</span>
+            </div>
+            <div id="icon-kuai" style="position: absolute;right: 1em;">
+                <div class="touxiang" id="see"></div>
+                <span>2000人</span>
+            </div>
+        </div>
+    </section>
+    <!--标题-->
+    <!--正文-->
+    <section id="wenzhang">
+        <p>
+
+        </p>
+        <p>
+
+        </p>
+        <p>
+
+        </p>
+    </section>
+    <!--按钮-->
+    <div style="margin-bottom: 3em">
+        <a href="tzxq.html">
+            <div class="btn">上一篇</div>
+        </a>
+        <a href="tzxq.html">
+            <div class="btn">下一篇</div>
+        </a>
+    </div>
+
+
+
+    <!--弹出框-->
+    <div class="am-share">
+        <h3 class="am-share-title">分享到</h3>
+        <ul class="am-share-sns">
+            <li>
+                <a href="#">
+                    <i class="share-icon-weibo" style="background: url(img/weixin.png) no-repeat center ; background-size:100% 36px;"></i>
+                    <span>微信</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="share-icon-weibo" style="background: url(img/QQ.png) no-repeat center ; background-size:100% 36px;"></i>
+                    <span>QQ</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="share-icon-weibo" style="background: url(img/weibo.png) no-repeat center ; background-size:100% 36px;"></i>
+                    <span>微博</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="share-icon-weibo" style="background: url(img/facebook.png) no-repeat center ; background-size:100% 36px;"></i>
+                    <span>脸书</span>
+                </a>
+            </li>
+        </ul>
+        <div class="am-share-footer">
+            <button class="share_btn">取消</button>
+        </div>
+    </div>
+
+
+    <!-- <script type="text/javascript" src="cordova.js"></script> -->
+    <script src="lib/jquery/jquery.js"></script>
+    <script type="text/javascript">
+        function toshare() {
+            $(".am-share").addClass("am-modal-active");
+            if ($(".sharebg").length > 0) {
+                $(".sharebg").addClass("sharebg-active");
+            } else {
+                $("body").append('<div class="sharebg"></div>');
+                $(".sharebg").addClass("sharebg-active");
+            }
+            $(".sharebg-active,.share_btn").click(function () {
+                $(".am-share").removeClass("am-modal-active");
+                setTimeout(function () {
+                    $(".sharebg-active").removeClass("sharebg-active");
+                    $(".sharebg").remove();
+                }, 300);
+            })
+        }	
+    </script>
+    <script>
+        $(function (PN) {
+
+            diaoqu()
+
+            function diaoqu() {
+                console.log("取数据啦")
+                $.ajax({
+                    type: 'get',
+                    url: `http://itcmsg.bnuz.edu.cn:8090/test/XCXSP_info`,
+                    dataType: 'text',
+                    jsonp: 'callback',
+                    jsonpCallback: "successCallback",
+
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        // alert(XMLHttpRequest.status);
+                        // alert(XMLHttpRequest.readyState);
+                        // alert(textStatus);
+                    },
+                    beforeSend: function () {
+                      
+                    },
+                    success: function (data) {
+                        json = $.parseJSON(data);
+                            var name = json.SPID;
+                            var idnumber = json.SPMC;
+                            var SPJG = json.SPJG;
+                            var SPKC = json.SPKC;
+                            var img = json.SPPIC;
+                            var spxq = json.SPXQ;
+                            $("#wenzhang p").text(
+                                spxq
+                            )
+                            
+                        
+                    }
+                })
+            }
+        })
+    </script>
+</body>
+
+</html>

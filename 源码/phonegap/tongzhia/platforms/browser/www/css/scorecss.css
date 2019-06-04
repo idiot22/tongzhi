@@ -1,0 +1,239 @@
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0 
+    }
+    .tou
+    {
+        width: 100%;
+        height: 2rem;
+        text-align: center;
+        color: white;
+        line-height: 2rem;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(to right, #bfd097, #43a7b3);
+        /* background: linear-gradient(to right,#aece6d,#7ae8b1 , #4cd9d3); */
+    
+    }
+    .z
+    {
+        width:30%;
+        height: 2rem;
+        margin:auto;
+        
+    }
+    .tou img
+    {
+        display: block;
+        width:1rem;
+        height: 1rem;
+        float: left;
+        margin-left: rem;
+    }
+
+    .fengetiao
+    {
+        width: 100%;
+        height: 0.5rem;
+        background: linear-gradient(to right, #38627c , #bbd286);
+        background:rgb(221, 221, 221);
+        background: linear-gradient(to right, #38627c69 , #bbd2867c);
+        background:rgb(242, 242, 242);
+    }
+    .fenlei
+    {width: 100%; height: 3rem;
+    border-bottom: 1px solid #ebebeb; 
+    color: black;
+}
+.fenge
+{
+    width:100%;
+    height: 0.5rem;
+    background: #f5f5f5;
+}
+.s
+    {
+        width:70%;
+        height: 1.5rem;
+        margin:auto;
+        margin-top: 0.5rem;
+        /* background:green; */
+        text-align: center;
+        line-height: 1.5rem;
+        /* color: #bbd286;
+        color: #aac768; */
+        
+        /* color: #63baa8; */
+    }
+    .s1
+    {
+        width: 25%;
+        height:3rem;
+        color: #a4c45b;
+        float: left;
+    }
+    .s2
+    {
+        width: 25%;
+        height:3rem;
+        color: #c5c5c5;
+        float: left;
+    }
+    /* .s2:hover
+    {
+    background:rgb(173,199,132,0.1);
+    }
+.s1:hover
+    {
+    background:rgb(173,199,132,0.1);
+    } */
+    .s3
+    {
+        width: 25%;
+        height:3rem;
+        color: #c5c5c5;
+        float: left;
+    }
+    .s4
+    {
+        width: 25%;
+        height:3rem;
+        color: #c5c5c5;
+        float: left;
+    }
+   
+   
+    .z1
+    {
+        display: block;
+    }
+    .z2
+    {
+        display:none;
+    }
+
+
+
+
+    .yesornot
+    {width: 100%; height: 5rem;
+    border-bottom: 1px solid #fcfcfc;
+ }
+    .yes 
+    {
+        width: 50%;
+        height:5rem;
+        /* background:rgb(173,199,132,0.1); */
+        float: left;
+    }
+    .no 
+    {
+        width: 50%;
+        height:5rem;
+        background:rgb(173,199,132,0.1);
+        float: left;
+    }
+
+    .allh1
+    {
+        display: inline;
+    }
+    .allh2
+    {
+        display: none;
+    }
+
+   
+    .zhi
+    {
+        width: 60%;
+        height: 5rem;
+        margin:auto;
+        /* background:#38627c; */
+        overflow: hidden;
+    }
+    .iconn
+    {
+        width: 2rem;
+        height: 2rem;
+        margin:auto;
+        margin-top: 0.5rem;
+        /* background:aqua; */
+    }
+    .iconn img
+    {
+        display: block;
+        width:100%;
+    }
+    .ming
+    {
+     
+        width:70%;
+        height: 1.5rem;
+        margin:auto;
+        margin-top: 0.5rem;
+        /* background:green; */
+        text-align: center;
+        line-height: 1.5rem;
+        color: #7c7c7c;
+        
+    }
+    .ming1
+    {
+        width:70%;
+        height: 1.5rem;
+        margin:auto;
+        margin-top: 0.5rem;
+        /* background:green; */
+        text-align: center;
+        line-height: 1.5rem;
+        color: #7c7c7c;
+    }
+    .t 
+    {
+        width: 100%;
+        height: 4rem;
+        display:flex;
+        align-items:center;
+        border-bottom:1px solid #e6e6e6;
+    }
+    .ic1
+    {
+        width:1rem;
+        height: 1rem;
+        background:#5cb85c;
+        border-radius: 2rem;
+        float: left;
+        margin-left: 1rem;
+    }
+    .ic1 img
+    {
+        display: block;
+        width: 100%;
+    }
+    .left1
+    {
+        width: 55%;
+        height: 3rem;
+        color: rgb(73, 73, 73);
+        font-size: 1rem;
+        line-height: 3rem;
+        float: left;
+        margin-left: 1rem;
+        
+    }
+    .right1{
+        width:30%;
+        height: 3rem;
+        color: rgb(107, 107, 107);
+        float: left;
+        margin-left: 20%;
+        /* background: #5cb85c; */
+        font-size: 0.9rem;
+        }
+    .fen 
+    {
+        width: 100%;
+        margin-top: 4%;
+    }

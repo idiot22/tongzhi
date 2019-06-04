@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <title>通知</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <section class="site-container" style="position:relative;z-index:1000;top:-12px;margin-right:0px;margin-left:0px ">
+        <section class="card">
+            <div id="touxiang">
+                <img src="img/touxiang.jpg" alt="">
+            </div>
+            <form>
+                <div class="form_wrapper name">
+                    <div class="logo">
+                        <img src="img/head.png">
+                    </div>
+                    <input type="name" class="form_input " id="username" name="name">
+                </div>
+                <div class="form_wrapper password">
+                    <div class="logo">
+                        <img src="img/pwd.png">
+                    </div>
+                    <input type="password" class="form_input" id="password" name="password">
+                </div>
+                <div class="form_wrapper_submit pulse infinite">
+                    <div class="form_input_submit">
+                        <button type="button" name="submit" class="btn"  id="btn">登录</button>
+                    </div>
+                </div>
+                <div class="foot">
+                    <input type="checkbox">记住密码
+                    <div class="pull-right">忘记密码?</div>
+                </div>
+            </form>
+        </section>
+    </section>
+
+
+
+    
+    <!--遮罩弹出框-->
+    <div id="mask">
+        </div>
+    
+        <div id="check">
+            <div>
+                <span class="que">登录失败</span>
+            </div>
+            <span class="wen">用户名或密码错误，请重新填写！ </span>
+            <div>
+                <div class="button2 no">确定</div>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+   
+    <script src="js/login.js"></script>
+</body>
+</html>

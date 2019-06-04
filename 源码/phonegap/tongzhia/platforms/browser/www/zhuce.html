@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *"
+    />
+    <title>绑定信息</title>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/login.css">
+    <style>
+        #zcemail,#yanzheng{
+            height: 4rem
+        }
+        .site-container {
+    width:90%;
+    margin: 10px auto;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    padding-top: 3%;
+    background-color: white;
+    padding-bottom: 3%;
+    background: #fbfdfb;
+}
+    </style>
+</head>
+
+<body>
+    <section class="site-container">
+        <section class="card" style="width:80%">
+            <div id="title">
+                绑定信息
+            </div>
+            <form>
+                <div class="form_wrapper name">
+                    <div class="logo">
+                        <img src="img/email.png">
+                    </div>
+                    <input type="email" class="form_input " id="zcemail" name="name" placeholder="请输入邮箱">
+                </div>
+                <div>
+                    <div id="yzm">获取验证码</div>
+                </div>
+                <div class="form_wrapper password syzm">
+                    <div class="logo">
+                        <img src="img/yzm.png">
+                    </div>
+                    <input type="text" class="form_input" id="yanzheng" name="password" placeholder="请输入验证码">
+                </div>
+                <div class="form_wrapper_submit pulse infinite">
+                    <div class="form_input_submit">
+                        <button type="button" name="submit" class="btn">确定</button>
+                    </div>
+                </div>
+                <a href="inform.html">
+                <div class="foot">
+                    <div id="nobd">暂不绑定</div>
+                </div>
+                </a>
+            </form>
+        </section>
+    </section>
+    <!-- <script type="text/javascript" src="cordova.js"></script> -->
+    <script src="https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/jquery/jquery-1.10.2.min_65682a2.js"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>

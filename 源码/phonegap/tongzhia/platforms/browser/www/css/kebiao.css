@@ -1,0 +1,225 @@
+/*课表头*/
+body{
+    font-family:sans-serif;
+    box-sizing: border-box;
+    background: white;
+}
+.back{
+  position: absolute;
+  width:1.5em;
+  height: 1.5em;
+  top:0.45em;
+  left:0.4em;
+  z-index:2000;
+}
+.back img{
+    width: 100%
+}
+#kebiao-head{
+ height: 2.5em;
+ line-height: 1.1em;
+ padding: 0.2em;
+}
+#head-mid{
+    vertical-align: middle;
+    letter-spacing: 0px;
+}
+#head-mid div{
+    font-size:0.9em;
+}
+#head-mid div:nth-of-type(1){
+    transform: translateX(2.5%)
+}
+#head-mid div:nth-of-type(2){
+    font-size:0.6em
+}
+#head-mid img{
+    width: 5%;
+}
+
+/*修改周数和学期*/
+#xiugai{
+    width: 100%;
+    background: #fafbfb;
+    overflow: scroll;
+    position: fixed;
+    top:2.8em
+}
+#gai-week{
+    position: fixed;
+    width: 13%;
+    height: 3.5em;
+    background: #f5f5f5;
+    text-align: center;
+    padding: 0.2em;
+    z-index: 1000;
+}
+#gai-week img{
+    width: 42%;
+    height: 1.2em;
+}
+#gai-week div{
+    color: #515151;
+    font-size:0.6em
+}
+#week-list{
+    margin-left: 13%;
+    position: relative;
+    width: 58em;
+    height: 3.5em;
+    z-index: 0;
+}
+#xiugai{
+    z-index: 1000;
+}
+#xiugai #week-list li{
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+    margin:0em 0.2em;
+    padding: 0.2em 0em;
+    float: left;
+    width: 2.8em;
+    height: 2.8em;
+    border: 0.5px solid black;
+    background: white;
+    list-style:none;
+    vertical-align: middle;
+    text-align: center;
+    /* font-size: 0.9em; */
+}
+#xiugai #week-list li span{
+    display: block;
+    line-height: 1em;
+    height:1em;
+    font-size: 0.4em;
+    
+}
+#xiugai #week-list .shu{
+    font-size:1.2em
+}
+
+
+/*课程表*/
+
+#kechen-body{
+    width: 100%;
+    height:  50em;
+    margin-top: 6.2em; 
+    
+}
+.kebiao-table {
+    width: 100%;
+    border-spacing: 0;
+
+}
+
+.kebiao-table th {
+    height: 2.5em;
+    background: #f3f8f8;
+    color: #6d8498;
+    font-weight: 400;
+    font-size: 0.7em;
+    text-align: center;
+    line-height:1em;
+    padding: 0.3em 0em
+}
+.kebiao-table th p{
+    margin: 0px;
+    padding:0.2em 0em;
+}
+.kebiao-table th span{
+    font-size: 0.6em
+}
+.kebiao-table th:nth-of-type(1)
+{
+    font-size: 0.7em ;
+   
+}
+.kebiao-table td {
+    font-size: 0.95em;
+    height: 3em;
+    border-bottom: 1px dashed #eee;
+    text-align: center;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.kebiao-table tr td:first-child {
+    background: #f3f8f8;
+    color: #698196;
+    border-bottom: none;
+}
+
+
+.kc-sub {
+    position: absolute;
+    padding: 0.5em;
+    top: 8.9em;
+    color: white;
+    left: 2.5em;
+    background: red;
+    width: 13%;
+    height: 9em;
+    text-align: center;
+    border-radius: 0.5em;
+}
+.del-btn {
+    position: absolute;
+    font-size: 0.7em;
+    top: -2.2em;
+    left: 10%;
+    width: 80%;
+    padding: 0em 0.2em;
+    height: 1.7em;
+    text-align: center;
+    background: white;
+    color: #56ba89;
+    border: 0.06em solid #dedede;
+    border-radius: 0.5em;
+    line-height: 1.7em;
+    box-shadow: 0px 1px 6px 0px #dcdcdc;
+    letter-spacing: 0.1em;
+    z-index: 2000;
+}
+.mask{
+    position: absolute;
+    top:0px;
+    background: rgba(255, 255, 255, 0.8)
+}
+@keyframes fadeInUp{
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0,40%,0);
+        transform: translate3d(0,40%,0);
+    }
+}
+#add-sum{
+    width: 100%;
+    overflow: hidden;
+}
+.add-class{
+    position: absolute;
+    top:10em;
+    left:1em;
+    width: 12%;
+    height: 3em;
+    text-align: center;
+    background: #e1ebf2;
+    line-height: 3em;
+    color: #7993ab;
+}
+.add-class span{
+    font-size:1.5em
+}
+#kechen-body{
+  
+}
+#fujia{
+    position: relative;
+    top: -48.4em;
+}
+
+
+
+
+

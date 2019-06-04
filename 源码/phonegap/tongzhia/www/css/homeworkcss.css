@@ -1,0 +1,251 @@
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0 
+    }
+    .tou
+    {
+        width: 100%;
+        height: 2rem;
+        text-align: center;
+        color: white;
+        line-height: 2rem;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(to right, #bfd097, #43a7b3);
+        /* background: linear-gradient(to right,#aece6d,#7ae8b1 , #4cd9d3); */
+    
+    }
+    .z
+    {
+        width:30%;
+        height: 2rem;
+        margin:auto;
+        
+    }
+    .tou img
+    {
+        display: block;
+        width:1rem;
+        height: 1rem;
+        float: left;
+        margin-left: rem;
+    }
+
+    .fengetiao
+    {
+        width: 100%;
+        height: 0.5rem;
+        background: linear-gradient(to right, #38627c , #bbd286);
+        background:rgb(221, 221, 221);
+        background: linear-gradient(to right, #38627c69 , #bbd2867c);
+        background:rgb(242, 242, 242);
+    }
+    .yesornot
+    {width: 100%; height: 5rem;
+    border-bottom: 1px solid #ebebeb; }
+    .yes 
+    {
+        width: 50%;
+        height:5rem;
+        /* background:rgb(173,199,132,0.1); */
+        float: left;
+    }
+    .no 
+    {
+        width: 50%;
+        height:5rem;
+        background:rgba(219, 219, 219, 0.1);
+        float: left;
+    }
+
+    .allh1
+    {
+        display: inline;
+    }
+    .allh2
+    {
+        display: none;
+    }
+
+   
+    .zhi
+    {
+        width: 60%;
+        height: 5rem;
+        margin:auto;
+        /* background:#38627c; */
+        overflow: hidden;
+    }
+    .zhi1
+    {
+        width: 60%;
+        height: 5rem;
+        margin:auto;
+        /* background:#38627c; */
+        overflow: hidden;
+    }
+    .iconn
+    {
+        width: 2rem;
+        height: 2rem;
+        margin:auto;
+        margin-top: 0.5rem;
+        /* background:aqua; */
+    }
+    .iconn1
+    {
+        width: 2rem;
+        height: 2rem;
+        margin:auto;
+        margin-top: 0.5rem;
+        /* background:aqua; */
+    }
+    .iconn img
+    {
+        display: block;
+        width:100%;
+    }
+    .iconn1 img
+    {
+        display: block;
+        width:100%;
+    }
+    .ming
+    {
+        width:70%;
+        height: 1.5rem;
+        margin:auto;
+        margin-top: 0.5rem;
+        /* background:green; */
+        text-align: center;
+        line-height: 1.5rem;
+        color: #5cb85c;
+        /* color: #dadada; */
+        font-size: 0.9rem;
+    }
+    .ming1
+    {
+        width:70%;
+        height: 1.5rem;
+        margin:auto;
+        margin-top: 0.5rem;
+        /* background:green; */
+        text-align: center;
+        line-height: 1.5rem;
+        color: rgb(207, 207, 207);
+        font-size: 0.9rem;
+    }
+    .tiao
+    {
+        width: 100%;
+        height: 4rem;
+        /* background:pink; */
+        display:flex;
+        align-items: center;
+        border-bottom:1px solid #ebebeb;
+    }
+    .ic1 
+    {
+        width:0.7rem;
+        height: 0.7rem;
+        float: left;
+        margin-left: 1rem;
+        background: #d9534f;
+        border-radius: 1rem;
+    }
+    .ic2 
+    {
+        width:0.7rem;
+        height: 0.7rem;
+        float: left;
+        margin-left: 1rem;
+        background: #f0ad4e;
+        border-radius: 1rem;
+    }
+    .ic3 
+    {
+        width:0.7rem;
+        height: 0.7rem;
+        float: left;
+        margin-left: 1rem;
+        background: #5cb85c;
+        border-radius: 1rem;
+    }
+    .ic img
+    {
+        display: block;
+        width:100%;
+    }
+    .shu
+    {
+        width:60%;
+        height: 3rem;
+        float: left;
+        margin-left: 1rem;
+        /* background: #38627c; */
+    }
+    .name
+    {
+        width: 100%;
+        color:rgb(88, 88, 88);
+        font-size: 0.9rem;
+        margin-top: 0.1rem;
+    }
+    .date
+    {
+        width:100%;
+        color: rgb(104, 104, 104);
+        font-size: 0.9rem;
+        margin-top: 0.1rem;
+    }
+    .tixing
+    {
+        width:20%;
+        height: 3rem;
+        float: left;
+        margin-left: 1rem;
+        font-size: 0.9rem;
+        
+        text-align: center;
+        line-height: 2rem;
+     
+    }
+    .tixing img
+    {
+        display: block;
+        width: 1.5rem;
+        top: 5%;
+        margin:auto;
+        
+    }
+    .tixingz
+    {
+        color:rgb(180, 180, 180);
+        font-size: 0.9rem;
+    }
+   
+    .tixing2
+    {
+        width:20%;
+        height: 3rem;
+        float: left;
+        margin-left: 1rem;
+        font-size: 0.9rem;
+        
+        text-align: center;
+        line-height: 2rem;
+     
+    }
+    .tixing2 img
+    {
+        display: block;
+        width: 1.5rem;
+        top: 5%;
+        margin:auto;
+    }
+    .tixingz1
+    {
+        color:rgb(180, 180, 180);
+    }
+    

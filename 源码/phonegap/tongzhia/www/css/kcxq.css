@@ -1,0 +1,55 @@
+body{
+    overflow: hidden;
+}
+#edit{
+    margin-top:2.5em
+}
+.row{
+    width:100%;
+    background: white;
+    height: 2.6em;
+    line-height: 2.6em;
+    margin: 0px;
+    border-bottom: 0.05em solid #eeeeee;
+}
+.row span{
+    padding: 0.5em 0.5em 0em 1em;
+    font-size: 0.9em;
+    color: #a2a2a2;
+}
+.row input{
+    border: 0px;
+    padding-left: 0.5em;
+    outline: none;
+    width:70%;
+    border-radius: 0;
+    line-height: 2.3em;
+}
+#kc{
+    margin: 4em 0em 2em 0em;
+}
+
+
+
+/*按钮*/
+#save-btn{
+    text-align: center;
+    outline: none;
+    margin-top: 1em;
+    background: #8acb9c;
+    border: none;
+    width: 70%;
+    color: white;
+    border-radius: 0.8em;
+    font-size:1.1em ;
+    padding: 0.4em 0em;
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    transition: backgroundColor 1s ease;
+    transition: width 1s;
+}
+#save-btn:hover{
+    background: #58a06c;
+    width: 60%;
+}

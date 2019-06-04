@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+   
+    <link rel="stylesheet" type="text/css" href="css/index2.css" />
+    <title>Hello World</title>
+</head>
+<style>
+    body{
+        background: url(img/bg.jpg) no-repeat;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #play{
+        width:15%
+    }
+    #stop{
+        width:15%
+    }
+    #music{
+        position: relative;
+        text-align: center;
+        
+    }
+    #next{
+        margin-left:1em; 
+        width:12%;
+    }
+    #pre{
+        margin-right:1em; 
+        width: 12%;
+        transform: scaleX(-1);
+    }
+    #yuan{
+        width: 80%;
+        height:270px;
+        overflow: hidden;
+        background:#629090;
+        margin:auto;
+        margin-bottom: 40px;
+       
+        background-clip:content-box;
+        border:8px rgba(1,1,1,0.5) solid;
+        border-radius:200px;
+  
+    }
+    #image{
+        width:310px;
+        height: 310px;
+    }
+    #suiji{
+        position: absolute;
+        width: 6%;
+        top:50%;
+        transform: translate(-2em,-45%);
+  
+
+    }
+    #channel{
+        position: absolute;
+        width: 6%;
+        margin-left:1em;
+        top:50%;
+        transform: translateY(-45%)
+    }
+    #time{
+        width: 80%;
+        height:0.2em;
+        background: rgba(255,255,255,0.3);
+        border-radius: 0.5em;
+        margin:  0px 10%;
+        margin-bottom:25px ;
+    }
+    #lv{
+        width: 40%;
+        height:0.2em;
+        background:rgb(0, 224, 103);
+        border-radius: 0.5em;
+        position: relative;
+    }
+    #jindu-yuan{
+        width: 10%;
+        position: absolute;
+        right: 0px;
+        transform: translateY(-40%)
+    }
+</style>
+<body>
+   <div style="width:100%;height: 650px;background: url(img/bg.jpg) no-repeat;position: relative;z-index: 1000;padding-top:100px">
+    <div id="yuan">
+        <img src="img/bg2.jpg" id="image" >
+    </div>
+    <div id="time">
+        <div id="lv">
+                <img  id="jindu-yuan"src="img/yuan.png">
+        </div>
+    </div>
+    <div id="music">
+            <img   id="suiji"src="img/suiji.png">
+            <a href="day.html"><img   id="pre"src="img/next.png"></a>
+            <a class="btn large" onclick="playorpause();">
+                <img id="play" src="img/pause.png"  >
+            </a>
+            <a href="#" class="btn large" onclick="stopAudio();">
+                <img id="stop" src="img/stop.png">
+            </a>
+            <img   id="next" src="img/next.png">
+            <img   id="channel"src="img/channel.png">
+    </div>
+   </div>
+    <script type="text/javascript" src="cordova.js"></script>
+
+    <script>
+        // 音频播放器
+        var flag=0;
+        var first=0;
+        var my_media = null;
+        var mediaTimer = null;
+        var play = document.getElementById("play");
+        var img = document.getElementById("image");
+        var jiao =0;
+       
+        function playorpause(){
+            if(flag==0){
+                playAudio('http://alpha.bnuz.edu.cn:8088/test/012.mp3');
+                play.src ="img/play.png";
+                flag=1;
+                console.log("1232");
+                clear =setInterval(function(){
+                jiao+=1;
+                img.style.transform=`rotate(${jiao}deg)`;
+            },50)
+            }
+            else{
+                pauseAudio();
+                play.src ="img/pause.png";
+                flag=0;
+                console.log("1232");
+            }
+        }
+        // 播放音频
+        function playAudio(src) {
+            // 从目标文件创建Media对象
+            if(first==0){
+                my_media = new Media(src, onSuccess, onError);
+                first++;
+            }
+
+            // 播放音频
+            my_media.play();
+        }
+
+        // 暂停音频播放
+        function pauseAudio() {
+            if (my_media) {
+                my_media.pause();
+                clearInterval(clear);
+            }
+        }
+
+        // 停止音频播放
+        function stopAudio() {
+            if (my_media) {
+                my_media.stop();
+                play.src ="img/pause.png";
+                clearInterval(clear);
+            }
+            clearInterval(mediaTimer);
+            mediaTimer = null;
+            flag=0;
+        }
+
+        // 创建Media对象成功后调用的回调函数
+        function onSuccess() {
+            console.log("playAudio():Audio Success");
+        }
+
+        // 创建Media对象出错后调用的回调函数
+        function onError(error) {
+            alert('code: '    + error.code    + '\n' + 
+                'message: ' + error.message + '\n');
+        }
+
+
+
+    </script>
+    <!-- <script>
+        window.onload=function(){
+            var img = document.getElementById("image");
+            var jiao =0;
+            setInterval(function(){
+                jiao+=1;
+                img.style.transform=`rotate(${jiao}deg)`;
+            },50)
+            
+        }
+    </script> -->
+</body>
+
+</html>

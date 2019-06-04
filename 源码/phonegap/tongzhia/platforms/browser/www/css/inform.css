@@ -1,0 +1,201 @@
+
+/*字体引用*/
+@font-face {font-family: 'webfont';
+    src: url('//at.alicdn.com/t/webfont_977bqhrqpbo.eot'); /* IE9*/
+    src: url('//at.alicdn.com/t/webfont_977bqhrqpbo.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('//at.alicdn.com/t/webfont_977bqhrqpbo.woff') format('woff'), /* chrome、firefox */
+    url('//at.alicdn.com/t/webfont_977bqhrqpbo.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('//at.alicdn.com/t/webfont_977bqhrqpbo.svg#思源黑体-粗') format('svg'); /* iOS 4.1- */
+  }
+  
+a{
+   text-decoration: none; 
+   color: black;
+}
+a:hover{
+    color: black;
+    text-decoration: none; 
+}
+body{
+
+    padding : 0px;
+    margin:0px;
+    box-sizing: border-box;
+    font-family:sans-serif;
+    color:#414141;
+    background: #f8f8f8;
+}
+header{
+    width: 100%;
+    height: 2em;
+    font-size: 1.1em;
+    text-align: center;
+    line-height: 2em;
+    color: white;
+    letter-spacing: 0.2em;
+    background: -webkit-linear-gradient(to right, #9cd093 , #70c3a8,#3d9fa8); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(to right, #9cd093 , #70c3a8,#3d9fa8); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(to right, #9cd093 , #70c3a8,#3d9fa8); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #9cd093 , #70c3a8,#3d9fa8); /* 标准的语法 */
+    position:fixed;
+    top:0px;
+    z-index: 1000;
+}
+#inform-slide{
+    margin-top: 2em; 
+}
+/*通知分类圈样式*/
+#cirFenlei .row{
+    padding-left:2em;
+    padding-right: 2em;
+    background: white;
+}
+#cirFenlei .row>div:nth-of-type(odd){
+
+    height:4em;
+}
+#cirFenlei .row>div:nth-of-type(even){
+    height:4em;
+}
+#cirFenlei .circle{
+    width: 100%;
+    height: 4em;
+    margin:0px
+}
+#cirFenlei  .cirKuai{
+    width: 100%
+}
+#cirFenlei  .cirKuai img{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width:70%;
+}
+.cirFont{
+    width: 100%;
+    text-align: center;
+    font-size:0.9em;
+    color:  #737373;
+    margin-top: 0.2em; 
+    margin-bottom:1em 
+}
+#cirFenlei .col-xs-3{
+   margin-top: 0.5em  ;
+   margin-bottom: 1em  
+}
+/*通知列表样式*/
+#inform-body .inform-heading p{
+    line-height: 2.2em;
+    margin-left: 0.5em; 
+    font-size: 1.2em 
+}
+.inform-heading img{
+    position: absolute;
+    right: 0.5em;
+    width:8%;
+}
+#inform-body .inform-heading,.inform-heading span:first-child{
+    background: #fbfbfb;
+    height: 2.2em;
+    line-height: 2.2em;
+}
+
+#inform-body .inform-heading span:first-child{
+    display: inline-block;
+    width: 1%;
+    background:  #62a07c;
+    margin-right: 0.5em;
+}
+
+#inform-body .inform-list .media-list .media{
+    background: white;
+    padding: 0.6em 0px;
+    padding-left: 0.6em;
+}
+#inform-body .inform-list .media-list #media-first{
+    height: 0px;
+    padding: 1px;
+    background: #fbfbfb;
+    margin: 0px;
+}
+#inform-body .inform-list .media-left{
+    vertical-align: middle;
+}
+#inform-body .inform-list .media-body p:nth-of-type(1){
+    font-size:0.9em;
+    padding-bottom:0px ;
+    position: relative;
+    margin: 0px;
+}
+.biao{
+    display: block;
+    position: absolute;
+    top: -2px;
+    right: 15px;
+    text-align: center;
+    line-height: 1.6em;
+    width: 3em;
+    height: 1.5em;
+    border-radius: 0.7em;
+    font-size: 0.9em;
+    padding: 0px 5px;
+    margin-right: 10px;
+    
+}
+.jinji-warning{
+    background: #ff3237;
+    border: 0.03em solid;
+    color: white;
+}
+.zuixin-warning{
+    background: #62a782;
+    border: 0.03em solid;
+    color:white;
+}
+.yuan-warning{
+    background: #7bd3f6;
+    border: 0.03em solid;
+    color: white;
+}
+.yidu-warning{
+    color: #a3a3a3;
+    border: 0.03em solid #f0f0f0;
+    background: #f0f0f0;
+
+}
+
+#inform-body .xq{
+    font-size: 0.75em;
+    color: #858585;
+}
+#inform-body .inform-kuai .media {
+    margin: 0em;
+    border-bottom: 0.1em solid   #f3f3f3;
+}
+#inform-body .media-left {
+    width:25%
+}
+
+#inform-body .media-left img{
+    width: 100%
+}
+#inform-body .xinxi{
+    color: #737373;
+    font-size:0.7em;
+}
+#inform-body .media-heading{
+    font-size: 1em;
+    width: 100%;
+}
+.media,
+.media-body {
+  zoom: 1;
+  overflow:visible;
+}
+.inform-kuai ul{
+    margin: 0px
+}
+.media-heading {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}

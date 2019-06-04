@@ -1,0 +1,125 @@
+header{
+    font-size:1em
+}
+#xq-img{
+    width: 100%;
+    height: 10em;
+    background: url(../img/xqbg.jpg) no-repeat center ;
+    background-size:100% 10em
+}
+#title{
+    font-size:1.3em;
+    color:black;
+    padding: 0.5em 1em
+}
+.touxiang{
+    width:1.5em;
+    height:1.5em;
+    background: url(../img/tzxqtx.jpg) no-repeat center ;
+    background-size:100% 1.5em;
+    border-radius: 1em ;
+    display: inline-block;
+    float: left;
+    margin-right:0.2em 
+}
+#xqicon span{
+ font-size: 0.8em;
+ color: rgb(124, 124, 124);
+ float: left;
+}
+#xqicon{
+    padding: 0em 1.2em;
+    position: relative;
+}
+#icon-kuai{
+    float: left;
+    line-height: 1.5em;
+    margin-right:1em 
+}
+#time{
+    width:1.1em;
+    height:1.1em;
+    background: url(../img/time.png) no-repeat center ;
+    background-size:100% 1.4em;
+    margin-top:0.2em 
+}
+#see{
+
+    margin-top:0.2em ;
+    width:1.1em;
+    height:1em;
+    border-radius: 0em;
+    background: url(../img/see.png) no-repeat center ;
+    background-size:100% 1.5em;
+}
+
+#wenzhang{
+    padding: 1em 1em;
+    text-indent:2em;
+    font-size:0.9em;
+    color: rgb(145, 145, 145)
+}
+.btn{
+    width: 30%;
+    height: 2em;
+    background: rgb(123, 198, 162);
+    border-radius: 1em;
+    color: aliceblue;
+    text-align: center;
+    line-height: 2em;
+    box-shadow: 0px 0px 10px 0px #b3b3b3;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom:1em 
+}
+a{
+    text-decoration: none
+}
+/*返回*/
+.back{
+    position: absolute;
+    width:1.5em;
+    height: 1.5em;
+    left:0.4em;
+    margin-top:0.25em 
+  }
+  .back img{
+      width: 100%
+  }
+  .share{
+    position: absolute;
+    width:1.2em;
+    height: 1.2em;
+    right:0.4em;
+    margin-top:0.25em 
+  }
+  .share img{
+      width: 100%
+  }
+
+
+  /*弹出框*/
+  .am-share { 
+    font-size: 14px; border-radius: 1em; bottom: 0; left: 0; position: fixed; text-align: center; -webkit-transform: translateY(100%); -ms-transform: translateY(100%); transform: translateY(100%); -webkit-transition: -webkit-transform 300ms; transition: transform 300ms ; width: 100%; z-index: 1110; }
+.am-modal-active { transform: translateY(0px);  -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0) }
+.am-modal-out { z-index: 1109; -webkit-transform: translateY(100%); -ms-transform: translateY(100%); transform: translateY(100%) }
+
+.am-share-title { background-color: #f8f8f8; border-bottom: 1px solid rgb(240, 240, 240); border-top-left-radius: 1em; border-top-right-radius:1em; color: #555; font-weight: 400; margin: 0 10px; padding: 10px 0 0; text-align: center; }
+.am-share-title::after { content: ""; display: block; height: 0; margin-top: 10px; width: 100%; }
+
+.am-share-footer { margin: 10px; }
+.am-share-footer .share_btn { color: #6bb291;  display: block; width: 100%; background-color: #ffffff; border: 1px solid #ffffff; border-radius: 0; cursor: pointer;  font-size: 16px; font-weight: 400; line-height: 1.2; padding: 0.625em 0; text-align: center; transition: background-color 300ms ease-out 0s, border-color 300ms ease-out 0s; vertical-align: middle; white-space: nowrap;font-family:"微软雅黑";border-radius:1em   }
+
+.am-share-sns { background-color: #f8f8f8; border-radius: 0 0 1em 1em; margin: 0 10px; padding-top: 15px; height:auto; zoom:1; overflow:auto;padding-left: 0px; }
+
+.am-share-sns li { margin-bottom: 15px; display: block; float: left; height: auto;  width: 25%; }
+
+.am-share-sns a { color: #555; display: block; text-decoration:none; }
+.am-share-sns span { display: block; }
+
+.am-share-sns li i { background-position: center 50%; background-repeat: no-repeat; background-size: 36px 36px; background-color: #ccc; color: #fff; display: inline-block; font-size: 18px; height: 36px; line-height: 36px; margin-bottom: 5px; width: 36px; }
+.am-share-sns .share-icon-weibo {  background:url()no-repeat center ;
+    background-size:100% 1.5em;}
+
+.sharebg { background-color: rgba(0, 0, 0, 0.6); bottom: 0; height: 100%; left: 0; opacity: 0; position: fixed; right: 0; top: 0; width: 100%; z-index: 1100; display:none; }
+.sharebg-active { opacity: 1; display:block; }

@@ -1,0 +1,14 @@
+.inform-list{
+    margin-top: 3em 
+}
+/*返回*/
+.back{
+    position: absolute;
+    width:1.5em;
+    height: 1.5em;
+    
+    left:0.4em
+  }
+  .back img{
+      width: 100%
+  }

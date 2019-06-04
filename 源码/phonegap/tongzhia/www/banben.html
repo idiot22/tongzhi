@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/banbencss.css" />
+    <title>Document</title>
+</head>
+<body>
+    <div style="width:100%;position:relative;z-index:2000;height:650px;background:white">
+    <div class="tou">
+        <a href="mine.html"><img src="img/banben/more2.png"></a>
+        <div class="z">版本信息</div>
+    </div>
+<!-- <div class="all"> -->
+    <!-- <table class="tablee">
+        <tr>
+            
+            <td class="tda">
+            <img src="">
+            <div class="mz">设备名称</div>
+            </td>
+            <td id="b2">******</td>
+        </tr>
+        <tr>
+            <td >p版本</td>
+            <td id="b3">******</td>
+        </tr>
+        
+        <tr>
+            <td>连接类型</td>
+            <td id="b1">******</td>
+        </tr>
+        <tr>
+            <td>版本号</td>
+            <td id="b5">******</td>
+        </tr>
+     
+    </table> -->
+    <div class="tiao" style="margin-bottom:60px;">
+            <div class="one">
+                <div class="iconn"><img src="img/banben/phone.png"></div>
+                <div class="ti">设备名称</div>
+                <div class="more" id="b2">没找到</div>
+            </div>
+            <div class="one">
+                    <div class="iconn"><img src="img/banben/banben.png"></div>
+                    <div class="ti">p版本</div>
+                    <div class="more" id="b3">没找到</div>
+            </div>
+            <div class="one">
+                    <div class="iconn"><img src="img/banben/xinxi.png"></div>
+                    <div class="ti">连接类型</div>
+                    <div class="more" id="b1">没找到</div>
+            </div>
+            <div class="one">
+                    <div class="iconn"><img src="img/banben/leixing.png"></div>
+                    <div class="ti">版本号</div>
+                    <div class="more" id="b5">没找到</div>
+            </div>
+            </div>
+        </div>
+
+<!-- </div> -->
+</body>
+<script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  
+<script type="text/javascript" charset="utf-8">
+    document.addEventListener("deviceready",onDeviceReady,false);
+     function onDeviceReady(){
+       checkConnection();
+     }
+     function checkConnection(){
+              var networkState = navigator.network.connection.type;
+              var element1 = document.getElementById('b1');
+              var two = document.getElementById('b2');
+              var three = document.getElementById('b3');
+              var four = document.getElementById('b4');
+              var five = document.getElementById('b5');
+
+              var states = {};
+              states[Connection.UNKNOWN] = '不确定';
+              states[Connection.ETHERNET] = 'ETHERNET';
+              states[Connection.WIFI] = 'WIFI Connection';
+              states[Connection.CELL_2G] = 'Cell 2G Conncetion';
+              states[Connection.CELL_3G] = 'Cell 3G Conncetion';
+              states[Connection.CELL_4G] = 'Cell Conncetion';
+              states[Connection.NONE] = 'NO Conncetion';
+              element1.innerHTML = '类型'+':' + states[networkState];
+              
+              two.innerHTML =  device.name; 
+              three.innerHTML =device.phonegap;
+              four.innerHTML =  device.uuid; 
+              five.innerHTML=device.version; 
+     }
+  </script>
+   <!-- <script>
+    function onDeviceReady(){
+        onmouseOut();
+    }
+
+     function onmouseOut(){
+         var getB1 = document.getElementById('b1');
+         getB1.innerHTML = '连接类型';
+
+     }
+            
+ </script> -->
+ <script type="text/javascript" charset="utf-8">
+    // 等待加载PhoneGap    
+    //document.addEventListener("deviceready", onDeviceReady, false);
+    // PhoneGap加载完成 
+//     function devicename() {
+//         alert(1);
+//         var element = document.getElementById('b2');
+//         element.innerHTML = '设备名称：' + device.name; 
+//        }
+
+//     function devicephonegap() {
+//         var element = document.getElementById('b3');
+//         element.innerHTML = 'p版本：' + device.phonegap; 
+//        }
+
+//     function deviceuuid() {
+//         var element = document.getElementById('b4');
+//         element.innerHTML = '系统名称：' + device.uuid; 
+//        }  
+
+//     function deviceversion() {
+//         var element = document.getElementById('b5');
+//         element.innerHTML =  device.version; 
+//        } 
+
+// </script>
+</html>

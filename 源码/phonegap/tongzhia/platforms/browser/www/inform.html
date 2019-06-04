@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *"
+    />
+    <title>通知</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link type="text/css" href="css/inform.css" rel="stylesheet">
+    <link type="text/css" href="css/public2.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--页头-->
+    <header>
+        通知
+    </header>
+    <!--/页头-->
+    <!--轮播-->
+    <section>
+        <div id="inform-slide" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#inform-slide" data-slide-to="0" class="active"></li>
+                <li data-target="#inform-slide" data-slide-to="1"></li>
+                <li data-target="#inform-slide" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="img/banner.png" alt="...">
+                </div>
+                <div class="item">
+                    <img src="img/banner.png" alt="...">
+                </div>
+                <div class="item">
+                    <img src="img/banner.png" alt="...">
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <!-- <a class="left carousel-control" href="#inform-slide" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#inform-slide" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a> -->
+        </div>
+    </section>
+    <!--轮播-->
+    <!--圆圈分类-->
+    <section id="cirFenlei">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-3">
+                    <a href="inform-list.html?PN=1">
+                        <div class="cirKuai">
+                            <img src="img/jinji.png" alt="">
+                        </div>
+                        <div class="cirFont">紧急</div>
+                    </a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="inform-list.html?PN=2">
+                        <div class="cirKuai">
+                            <img src="img/zuixin.png" alt="">
+                        </div>
+                        <div class="cirFont">最新</div>
+                    </a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="inform-list.html?PN=3">
+                        <div class="cirKuai">
+                            <img src="img/xueyuan.png" alt="">
+                        </div>
+                        <div class="cirFont">学院</div>
+                    </a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="inform-list.html?PN=4">
+                        <div class="cirKuai">
+                            <img src="img/yidu.png" alt="">
+                        </div>
+                        <div class="cirFont">已读</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/圆圈分类-->
+    <!--通知类别一-->
+    <section id="inform-body"  style="margin-bottom:60px">
+        <div class="inform-kuai">
+            <div class="inform-heading">
+                <span class="pull-left" ></span>
+                <span class="pull-left"> 紧急通知</span>
+                <a href="inform-list.html?PN=1">
+                    <img src="img/more.png" alt="">
+                </a>
+            </div>
+            <div class="inform-list">
+                <ul class="media-list jinji-li">
+
+                    <li class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="img/1.jpg" alt="...">
+                            </a>
+                        </div>
+                        <!-- //position: absolute;right: 10px;padding: 5px -->
+                        <div class="media-body">
+                            <h4 class="media-heading">关于2017-2018奖学金评定事项说</h4>
+                            <p  style="display:block;position:relative">
+                                <span class="xinxi">发布者：信院团委</span>&nbsp;&nbsp;
+                                <span class="xinxi">时间：2018-11-25</span>
+                                <span class="jinji-warning biao" style="">紧急</span>
+                            </p>
+                            
+                            <p class=" xq" style="width:80%">
+                                同学们在在这周末将所需评优资料打包,包括证件照片，比赛的得奖奖状
+                            </p>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="img/1.jpg" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">关于2017-2018奖学金评定事项说</h4>
+                            <p >
+                                <span class="xinxi">发布者：信院团委</span>
+                                <span class="jinji-warning">紧急</span>
+                            </p>
+                            <span class="xinxi">时间：2018-11-25</span>
+                            <p class="xinxi xq">
+                                同学们在在这周末将所需评优资料打包,包括证件照片，比赛的得奖奖状
+                            </p>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="img/1.jpg" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">关于2017-2018奖学金评定事项说</h4>
+                            <p>
+                                <span class="xinxi">发布者：信院团委</span>
+                                <span class="jinji-warning">紧急</span>
+                            </p>
+                            <span class="xinxi">时间：2018-11-25</span>
+                            <p class="xinxi xq">
+                                同学们在在这周末将所需评优资料打包,包括证件照片，比赛的得奖奖状
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="inform-kuai">
+            <div class="inform-heading">
+                <span class="pull-left"></span>
+                <span class="pull-left"> 最新通知</span>
+                <a href="inform-list.html?PN=2">
+                    <img src="img/more.png" alt="">
+                </a>
+            </div>
+            <div class="inform-list">
+                <ul class="media-list zuixin-li">
+                    <li class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="img/1.jpg" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">关于2017-2018奖学金评定事项说</h4>
+                            <p>
+                                <span class="xinxi">发布者：信院团委</span>
+                                <span class="zuixin-warning">最新</span>
+                            </p>
+                            <span class="xinxi">时间：2018-11-25</span>
+                            <p class=" xq">
+                                同学们在在这周末将所需评优资料打包,包括证件照片，比赛的得奖奖状
+                            </p>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="img/1.jpg" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">关于2017-2018奖学金评定事项说</h4>
+                            <p>
+                                <span class="xinxi">发布者：信院团委</span>
+                                <span class="zuixin-warning">最新</span>
+                            </p>
+                            <span class="xinxi">时间：2018-11-25</span>
+                            <p class="xq">
+                                同学们在在这周末将所需评优资料打包,包括证件照片，比赛的得奖奖状
+                            </p>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="img/1.jpg" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">关于2017-2018奖学金评定事项说</h4>
+                            <p>
+                                <span class="xinxi">发布者：信院团委</span>
+                                <span class="zuixin-warning">最新</span>
+                            </p>
+                            <span class="xinxi">时间：2018-11-25</span>
+                            <p class="xq">
+                                同学们在在这周末将所需评优资料打包,包括证件照片，比赛的得奖奖状
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="inform-kuai">
+            <div class="inform-heading">
+                <span class="pull-left"></span>
+                <span class="pull-left"> 学院通知</span>
+                <a href="inform-list.html?PN=3">
+                    <img src="img/more.png" alt="">
+                </a>
+            </div>
+            <div class="inform-list">
+                <ul class="media-list xueyuan-li">
+                    <li class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="img/1.jpg" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">关于2017-2018奖学金评定事项说</h4>
+                            <p>
+                                <span class="xinxi">发布者：信院团委</span>
+                                <span class="yuan-warning">学院</span>
+                            </p>
+                            <span class="xinxi">时间：2018-11-25</span>
+                            <p class=" xq">
+                                同学们在在这周末将所需评优资料打包,包括证件照片，比赛的得奖奖状
+                            </p>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="img/1.jpg" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">关于2017-2018奖学金评定事项说</h4>
+                            <p>
+                                <span class="xinxi">发布者：信院团委</span>
+                                <span class="yuan-warning">学院</span>
+                            </p>
+                            <span class="xinxi">时间：2018-11-25</span>
+                            <p class="xq">
+                                同学们在在这周末将所需评优资料打包,包括证件照片，比赛的得奖奖状
+                            </p>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="img/1.jpg" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">关于2017-2018奖学金评定事项说</h4>
+                            <p>
+                                <span class="xinxi">发布者：信院团委</span>
+                                <span class="yuan-warning">学院</span>
+                            </p>
+                            <span class="xinxi">时间：2018-11-25</span>
+                            <p class="xq">
+                                同学们在在这周末将所需评优资料打包,包括证件照片，比赛的得奖奖状
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="inform-kuai">
+            <div class="inform-heading">
+                <span class="pull-left"></span>
+                <span class="pull-left"> 已读通知</span>
+                <a href="inform-list.html?PN=4">
+                    <img src="img/more.png" alt="">
+                </a>
+            </div>
+            <div class="inform-list">
+                <ul class="media-list yidu-li">
+                    <li class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="img/1.jpg" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">关于2017-2018奖学金评定事项说</h4>
+                            <p>
+                                <span class="xinxi">发布者：信院团委</span>
+                                <span class="yidu-warning">已读</span>
+                            </p>
+                            <span class="xinxi">时间：2018-11-25</span>
+                            <p class=" xq">
+                                同学们在在这周末将所需评优资料打包,包括证件照片，比赛的得奖奖状
+                            </p>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="img/1.jpg" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">关于2017-2018奖学金评定事项说</h4>
+                            <p>
+                                <span class="xinxi">发布者：信院团委</span>
+                                <span class="yidu-warning">已读</span>
+                            </p>
+                            <span class="xinxi">时间：2018-11-25</span>
+                            <p class="xq">
+                                同学们在在这周末将所需评优资料打包,包括证件照片，比赛的得奖奖状
+                            </p>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="img/1.jpg" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">关于2017-2018奖学金评定事项说</h4>
+                            <p>
+                                <span class="xinxi">发布者：信院团委</span>
+                                <span class="yidu-warning">已读</span>
+                            </p>
+                            <span class="xinxi">时间：2018-11-25</span>
+                            <p class="xq">
+                                同学们在在这周末将所需评优资料打包,包括证件照片，比赛的得奖奖状
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--通知类别一-->
+
+    <footer>
+        <div class="foot">
+            <a href="inform.html">
+                <div class="img"><img src="img/tubiao/tz1.png"></div>
+            </a>
+            <div class="text">通知</div>
+        </div>
+        <div class="foot">
+            <a href="competition.html">
+                <div class="img"><img src="img/tubiao/bs2.png"></div>
+            </a>
+            <div class="text">比赛</div>
+        </div>
+        <div class="foot">
+            <a href="day.html">
+                <div class="img"><img src="img/tubiao/rc2.png"></div>
+            </a>
+            <div class="text">生活</div>
+        </div>
+        <div class="foot">
+                <a href="mine.html">
+            <div class="img"><img src="img/tubiao/me2.png"></div>
+            <div class="text">我</div>
+        </div>
+    </footer>
+    <!-- <script type="text/javascript" src="cordova.js"></script> -->
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <script src="js/inform.js"></script>
+</body>
+
+</html>
